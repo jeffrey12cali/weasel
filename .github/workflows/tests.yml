@@ -1,5 +1,14 @@
 name: tests
 
+on:
+  push:
+    paths-ignore:
+      - "*.md"
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+    paths-ignore:
+      - "*.md"
+
 env:
   MODULE_NAME: "weasel"
   RUN_MYPY: "true"
